@@ -39,6 +39,7 @@ while x<=30 :
     if x%2==0:
         print(x,end="\t")
     x=x+1
+print("\n\n###########################\n\n")
 
 
 #Checking Prime
@@ -57,6 +58,7 @@ if isPrime :
 else:
       print(num, "is not a prime number")
 
+print("\n\n###########################\n\n")
 
 
 
@@ -68,6 +70,8 @@ while x<=10:
      x +=1
     
 print(sum)
+print("\n\n###########################\n\n")
+
 
 sum=0
 x=1
@@ -76,3 +80,32 @@ while x<=10:
      x +=1
     
 print(sum)
+
+print("\n\n###########################\n\n")
+
+
+# Reverse Number
+
+rev=0
+num=456
+n=num
+
+while num>0:
+    digit=num%10
+    rev= rev * 10 + digit
+    num= num//10
+    
+print(rev)
+
+print("\n\n###########################\n\n")
+
+rev=0
+num=5866
+n=num
+
+while num>0:
+    digit=num%10
+    rev= rev * 10 + digit
+    num= num//10
+    
+print(rev)
