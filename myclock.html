@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="clock">08:10:45</div>
+
+    <script>
+        setInterval(showTime, 1000);
+        function showTime() {
+        let time = new Date();
+        console.log(time);
+        let hour = time.getHours();
+       
+        let minute = time.getMinutes();
+        let second = time.getSeconds();
+  
+        am_pm = "AM"
+
+        if (hour > 12){
+            hour -=12 ;
+            //hour= hour-12
+            am_pm= "PM"
+        }
+        hour = hour < 10? "0" + hour : hour
+        minute = minute < 10? "0" + minute : minute
+        second = second < 10? "0" + second : second
+
+        let currentTime = hour + " : " + minute + " : " + second + am_pm;
+
+        document.getElementById("clock")
+            .innerHTML= currentTime;
+        }
+
+        showTime();
+    </script>
+
+</body>
+</html>
